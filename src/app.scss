@@ -7,6 +7,7 @@
         background-color: lightseagreen;
         position: relative;
         top: 70px;
+        scroll-behavior: smooth;
         scroll-snap-type: y mandatory; //add snap scrolling
         scrollbar-width: none; //disable scroll for FF
         &::-webkit-scrollbar{ display: none; } // for other browsers
