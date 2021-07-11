@@ -1,0 +1,20 @@
+.app{
+    height: 100vh;
+
+    .sections{
+        width: 100%;
+        height: calc(100vh - 70px); // to make room for top bar
+        background-color: lightseagreen;
+        position: relative;
+        top: 70px;
+        scroll-snap-type: y mandatory; //add snap scrolling
+        scrollbar-width: none; //disable scroll for FF
+        &::-webkit-scrollbar{ display: none; } // for other browsers
+
+        > *{  // for each element inside (intro, projects, etc)
+            width: 100vw;
+            height: calc(100vh - 70px);
+            scroll-snap-align: start;
+        }
+    }
+}
