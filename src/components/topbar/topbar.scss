@@ -7,7 +7,8 @@
     color: $mainColor;
     position: fixed;
     top: 0;
-    z-index: 2; // show topbar when scrolling
+    z-index: 3; // show topbar when scrolling
+    transition: all 1.5s ease;
 
     .wrapper{
         padding: 15px 30px;
@@ -57,9 +58,32 @@
                     width: 100%;
                     height: 3px;
                     background-color: $mainColor;
+                    transform-origin: left;
+                    transition: all 2s ease;
                 }
             }
         }
     }
 
+    &.active{
+        background-color: $mainColor;
+        color: white;
+        
+        .menu{
+            span{
+                &:first-child{
+                    background-color: white;
+                    transform: rotate(45deg);
+                }
+                
+                &:nth-child(2){
+                    opacity: 0;
+                }
+                &:last-child{
+                    background-color: white;
+                    transform: rotate(-45deg);
+                }
+            }   
+        }
+    }
 }

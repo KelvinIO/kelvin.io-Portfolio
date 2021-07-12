@@ -1,0 +1,44 @@
+@import "../global.scss";
+
+.sidebar{
+    width: 400px;
+    height: 100vh;
+    background-color: $mainColor;
+    position: fixed;
+    top: 0;
+    right: -400px; // menu starts hidden
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 1s ease;
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        font-size: 42px;
+        font-weight: 400;
+        color: white;
+        width: 60%;
+
+        li { // change anchor
+            margin-bottom: 45px;
+
+            a{
+                font-size: inherit;
+                color: inherit;
+                text-decoration: none;
+            }
+
+            &:hover{
+                font-weight: 700;
+            }
+        }
+    }
+
+    &.active{ // slide the menu on click
+        right: 0;
+    }
+}
