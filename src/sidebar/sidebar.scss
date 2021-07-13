@@ -5,8 +5,8 @@
     height: 100vh;
     background-color: $mainColor;
     position: fixed;
-    top: 0;
-    right: -400px; // menu starts hidden
+    top: -100vh;
+    right: 0; // menu starts hidden
     z-index: 2;
     display: flex;
     flex-direction: column;
@@ -33,12 +33,12 @@
             }
 
             &:hover{
-                font-weight: 700;
+                font-weight: 600;
             }
         }
     }
 
     &.active{ // slide the menu on click
-        right: 0;
+        top: 0;
     }
 }
